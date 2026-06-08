@@ -1,6 +1,6 @@
 package com.codedgarcia.expenses.manager.common.security;
 
-import com.pommedev.chiro.auth.service.JwtService;
+import com.codedgarcia.expenses.manager.auth.service.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
