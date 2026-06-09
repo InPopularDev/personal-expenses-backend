@@ -1,16 +1,15 @@
 package com.codedgarcia.expenses.manager.auth.controller;
 
-import com.codedgarcia.expenses.manager.auth.dto.AuthResponse;
-import com.codedgarcia.expenses.manager.auth.dto.LoginRequest;
-import com.codedgarcia.expenses.manager.auth.dto.RefreshRequest;
-import com.codedgarcia.expenses.manager.auth.dto.RegisterRequest;
+import com.codedgarcia.expenses.manager.auth.dto.*;
 import com.codedgarcia.expenses.manager.auth.service.AuthService;
+import com.codedgarcia.expenses.manager.user.entity.User;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -37,7 +36,7 @@ public class AuthController {
     public ResponseEntity<AuthResponse> refreshToken(
             @CookieValue(name = "refreshToken", required = false) String refreshToken,
             HttpServletResponse response) {
-        
+
         if (refreshToken == null) {
             return ResponseEntity.status(401).build();
         }
@@ -53,21 +52,31 @@ public class AuthController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping("/me")
+    public ResponseEntity<UserResponse> getUser(@AuthenticationPrincipal User user) {
+        return ResponseEntity.ok(
+                new UserResponse(
+                        user.getId(),
+                        user.getUsername()
+                )
+        );
+    }
+
     private void setTokenCookies(HttpServletResponse response, AuthResponse authResponse) {
         ResponseCookie accessTokenCookie = ResponseCookie.from("accessToken", authResponse.accessToken())
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(24 * 60 * 60)
-                .sameSite("Lax")
+                .sameSite("strict")
                 .build();
 
         ResponseCookie refreshTokenCookie = ResponseCookie.from("refreshToken", authResponse.refreshToken())
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(7 * 24 * 60 * 60)
-                .sameSite("Lax")
+                .sameSite("strict")
                 .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, accessTokenCookie.toString());
@@ -77,18 +86,18 @@ public class AuthController {
     private void clearTokenCookies(HttpServletResponse response) {
         ResponseCookie accessTokenCookie = ResponseCookie.from("accessToken", "")
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(0)
-                .sameSite("Lax")
+                .sameSite("strict")
                 .build();
 
         ResponseCookie refreshTokenCookie = ResponseCookie.from("refreshToken", "")
                 .httpOnly(true)
-                .secure(false)
+                .secure(true)
                 .path("/")
                 .maxAge(0)
-                .sameSite("Lax")
+                .sameSite("strict")
                 .build();
 
         response.addHeader(HttpHeaders.SET_COOKIE, accessTokenCookie.toString());
