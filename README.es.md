@@ -52,17 +52,17 @@ La URL base para todos los endpoints es: `http://localhost:8080/api/v1`
 
 ## 📋 Lo que falta (Implementación pendiente)
 
-| Funcionalidad / Tarea Pendiente | Responsable                                                                                                    | Status          |
-| :--- |:---------------------------------------------------------------------------------------------------------------|:----------------|
-| Implementación de controladores para el módulo `Dashboard` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia) | 🚧 En progreso  |
-| Endpoint `GET /category/{id}` en `CategoryController` | [   ]                                                                                                          | ⏳ Pendiente   |
-| Endpoint `PUT /category/{id}` en `CategoryController` | [   ]                                                                                                                | ⏳ Pendiente     |
-| Endpoint `DELETE /category/{id}` en `CategoryController` | [   ]  | ⏳ Pendiente     |
-| Endpoint `GET /transaction/{id}` en `TransactionController` |[   ]  | ⏳ Pendiente     |
-| Endpoint `PUT /transaction/{id}` en `TransactionController` | [   ]  | ⏳ Pendiente     |
-| Endpoint `DELETE /transaction/{id}` en `TransactionController` | [   ] | ⏳ Pendiente     |
-| Refactorización de `CategoryController` usando `CategoryService` | [   ]  | ⏳ Pendiente     |
-| Manejo global de errores (`orElseThrow` personalizado) | [   ]  | ⏳ Pendiente     |
+| Funcionalidad / Tarea Pendiente | Responsable                                                                                                    | Status         |
+| :--- |:---------------------------------------------------------------------------------------------------------------|:---------------|
+| Implementación de controladores para el módulo `Dashboard` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia) | 🚧 En progreso |
+| Endpoint `GET /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                         | ✅ Completado   |
+| Endpoint `PUT /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                                | ✅ Completado     |
+| Endpoint `DELETE /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)  | ✅ Completado     |
+| Endpoint `GET /transaction/{id}` en `TransactionController` |[   ]  | ⏳ Pendiente    |
+| Endpoint `PUT /transaction/{id}` en `TransactionController` | [   ]  | ⏳ Pendiente    |
+| Endpoint `DELETE /transaction/{id}` en `TransactionController` | [   ] | ⏳ Pendiente    |
+| Refactorización de `CategoryController` usando `CategoryService` | [   ]  | ⏳ Pendiente    |
+| Manejo global de errores (`orElseThrow` personalizado) | [   ]  | ⏳ Pendiente    |
 
 ---
 

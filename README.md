@@ -64,17 +64,17 @@ The base URL for all endpoints is: `http://localhost:8080/api/v1`
 
 ## 📋 Pending Tasks
 
-| Functionality / Pending Task | Responsible | Status |
-| :--- | :--- | :--- |
+| Functionality / Pending Task | Responsible | Status         |
+| :--- | :--- |:---------------|
 | Implementation of controllers for the `Dashboard` module | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia) | 🚧 In progress |
-| `GET /category/{id}` endpoint in `CategoryController` | [   ] | ⏳ Pending |
-| `PUT /category/{id}` endpoint in `CategoryController` | [   ] | ⏳ Pending |
-| `DELETE /category/{id}` endpoint in `CategoryController` | [   ] | ⏳ Pending |
-| `GET /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending |
-| `PUT /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending |
-| `DELETE /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending |
-| Refactoring `CategoryController` to use `CategoryService` instead of direct implementation | [   ] | ⏳ Pending |
-| Global error handling (`orElseThrow` customization) | [   ] | ⏳ Pending |
+| Endpoint `GET /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                         | ✅ Check        |
+| Endpoint `PUT /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                                | ✅ Check        |
+| Endpoint `DELETE /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)  | ✅ Check        |
+| `GET /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending      |
+| `PUT /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending      |
+| `DELETE /transaction/{id}` endpoint in `TransactionController` | [   ] | ⏳ Pending      |
+| Refactoring `CategoryController` to use `CategoryService` instead of direct implementation | [   ] | ⏳ Pending      |
+| Global error handling (`orElseThrow` customization) | [   ] | ⏳ Pending      |
 
 ---
 
