@@ -58,9 +58,9 @@ La URL base para todos los endpoints es: `http://localhost:8080/api/v1`
 | Endpoint `GET /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                         | ✅ Completado   |
 | Endpoint `PUT /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)                                                                                                                | ✅ Completado     |
 | Endpoint `DELETE /category/{id}` en `CategoryController` | <img src="https://github.com/Code-D-Garcia.png" width="24"/> [Code-D-Garcia](https://github.com/Code-D-Garcia)  | ✅ Completado     |
-| Endpoint `GET /transaction/{id}` en `TransactionController` |[   ]  | ⏳ Pendiente    |
-| Endpoint `PUT /transaction/{id}` en `TransactionController` | [   ]  | ⏳ Pendiente    |
-| Endpoint `DELETE /transaction/{id}` en `TransactionController` | [   ] | ⏳ Pendiente    |
+| `GET /transaction/{id}` endpoint in `TransactionController` | <img src="https://github.com/InPopularDev.png" width="24"/> [InPopularDev](https://github.com/InPopularDev)   | ✅ Completado     |
+| `PUT /transaction/{id}` endpoint in `TransactionController` | <img src="https://github.com/InPopularDev.png" width="24"/> [InPopularDev](https://github.com/InPopularDev) | ✅ Completado     |
+| `DELETE /transaction/{id}` endpoint in `TransactionController` | <img src="https://github.com/InPopularDev.png" width="24"/> [InPopularDev](https://github.com/InPopularDev) | ✅ Completado     |
 | Refactorización de `CategoryController` usando `CategoryService` | [   ]  | ⏳ Pendiente    |
 | Manejo global de errores (`orElseThrow` personalizado) | [   ]  | ⏳ Pendiente    |
 
