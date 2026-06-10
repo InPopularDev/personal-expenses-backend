@@ -3,6 +3,7 @@ package com.codedgarcia.expenses.manager.transaction.controller;
 import com.codedgarcia.expenses.manager.category.entity.Type;
 import com.codedgarcia.expenses.manager.transaction.dto.CreateTransactionRequest;
 import com.codedgarcia.expenses.manager.transaction.dto.TransactionResponse;
+import com.codedgarcia.expenses.manager.transaction.dto.UpdateTransactionRequest;
 import com.codedgarcia.expenses.manager.transaction.service.TransactionService;
 import com.codedgarcia.expenses.manager.user.entity.User;
 import lombok.RequiredArgsConstructor;
@@ -47,5 +48,31 @@ public class TransactionController {
 
         TransactionResponse response = transactionService.createTransaction(user.getId(),  request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
+
+    @GetMapping
+    public ResponseEntity<TransactionResponse> getTransactionById(
+            @AuthenticationPrincipal User user,
+            @RequestParam Long id){
+        TransactionResponse response = transactionService.getTransaction(user.getId(), id);
+        return ResponseEntity.ok(response);
+    }
+
+    @PutMapping
+    public ResponseEntity<TransactionResponse> updateTransaction(
+            @AuthenticationPrincipal User user,
+            @RequestParam Long id,
+            @RequestBody UpdateTransactionRequest request
+    ){
+        TransactionResponse updateResponse = transactionService.updateTransaction(user.getId(), id, request );
+        return ResponseEntity.ok(updateResponse);
+    }
+
+    @DeleteMapping
+    public void deleteTransactionById(
+            @AuthenticationPrincipal User user,
+            @RequestParam Long id
+    ){
+        transactionService.deleteTransaction(user.getId(), id);
     }
 }
